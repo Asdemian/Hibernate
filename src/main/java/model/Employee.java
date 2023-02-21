@@ -5,6 +5,7 @@ import javax.persistence.*;
 @Entity
 @Table(name = "employee")
 public class Employee {
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id")
@@ -20,6 +21,7 @@ public class Employee {
     @ManyToOne
     @JoinColumn(name = "city_id")
     private City city;
+
 
     public Employee() {
     }
